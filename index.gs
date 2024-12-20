@@ -39,3 +39,21 @@ function doPost(){
   response.setContent(JSON.stringify(data))
   return response
 }
+
+// HTML Formから受け取る
+function doGet(e) {
+  const data = new Array();
+  // タイムスタンプ
+  data.push(new Date());
+  data.push(e.parameter.name);
+  data.push(e.parameter.パラメーター名);
+
+  sheet.appendRow(data);
+
+  // 以下、レスポンス
+  const response = ContentService.createTextOutput();
+  response.setMimeType(MimeType.JSON);
+  // JSON形式でレスポンスする
+  response.setContent(JSON.stringify(String("Hello World")));
+  return response
+}
