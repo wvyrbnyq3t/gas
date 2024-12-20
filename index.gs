@@ -29,7 +29,23 @@ function getData(){
   }
 }
 
-console.log(getData())
+// ID検索
+function findById(id) {
+  const range = sheet.getRange(2, 1, (sheet.getLastRow() - 1), sheet.getLastColumn());
+  const textFinder = range.createTextFinder(id).matchEntireCell(true);
+  const findRange = textFinder.findNext();
+
+  if(findRange) {
+    const header = getHeader();
+    const range = sheet.getRange(findRange.getRow(), 1, 1, sheet.getLastColumn());
+    const data = range.getValues();
+    
+    return convertToJSON(header, data);
+  }
+  else{
+    return null;
+  }
+}
 
 // HTML側に送る
 function doPost(){
