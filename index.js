@@ -39,7 +39,7 @@ function doPost() {
   const acquired = String(document.getElementById("formAcquiredNum").value);
 
   // exec?以降が送るパラメータ
-  const apiURL =  `https://script.google.com/macros/s/()/exec?name=${name}&acquiredNum=${acquired}`;
+  const apiURL =  `https://script.google.com/macros/s/(ここはプロジェクトによって異なります)/exec?name=${name}&acquiredNum=${acquired}`;
 
   getReturnData(apiURL);
 }
