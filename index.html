@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  </head>
+  <body>
+    <div class="page-content">
+      <main>
+        <section id="ticketForm">
+          <h2>
+            ユーザー情報
+          </h2>
+          <form action="https://script.google.com/macros/s/AKfycbz-lpitcTmHfjl7OsFIG-AyKlUluprVb2JaNlc1PTjD15V-tyfwJ3YrF81dLxVR4Z7b8A/exec">
+            <table>
+              <tbody>
+                <tr>
+                  <th>
+                    <label for="name">
+                      お名前
+                    </label>
+                  </th>
+                  <td>
+                    <input type="text" name="name" id="formName" placeholder="舞浜太郎">
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <label for="acquiredNum">
+                      取得数
+                    </label>
+                  </th>
+                  <td>
+                    <input type="number" name="acquiredNum" id="formAcquiredNum" min="0" max="10" placeholder="取得数(0~10枚)">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+          <button type="button" class="btnType-1" id="js-submitBtn" aria-disabled="true">
+            取得する
+          </button>
+        </section>
+      </main>
+    </div>
+    <script src="script.js" charset="utf-8" defer></script>
+  </body>
+</html>
