@@ -47,6 +47,11 @@ function findById(id) {
   }
 }
 
+// 特定のセルの値を変更する
+function changeCell(row, column, value) {
+  const range = sheet.getRange(parseInt(row), parseInt(column), 1, 1).setValue(value);
+}
+
 // HTML側に送る
 function doPost(){
   const data = getData();
