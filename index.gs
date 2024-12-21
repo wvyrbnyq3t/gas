@@ -48,7 +48,7 @@ function findById(id) {
 }
 
 // 特定のセルの値を変更する
-function changeCell(row, column, value) {
+function changeCellValue(row, column, value) {
   const range = sheet.getRange(parseInt(row), parseInt(column), 1, 1).setValue(value);
 }
 
